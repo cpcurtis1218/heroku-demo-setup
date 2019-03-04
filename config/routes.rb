@@ -23,4 +23,5 @@ Rails.application.routes.draw do
   # Ingredients resource routes
   get '/ingredients' => 'ingredients#index'
   get '/ingredients/:id' => 'ingredients#show'
+  post '/ingredients' => 'ingredients#create'
 end
