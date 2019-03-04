@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   delete '/sign-out' => 'users#signout'
   patch '/change-password' => 'users#changepw'
 
-  #Books resource routes
+  # Books resource routes
   get '/books' => 'books#index'
+
+  # Patients resource routes
+  get '/patients' => 'patients#index'
 end
