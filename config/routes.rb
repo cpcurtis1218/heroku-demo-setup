@@ -14,11 +14,13 @@ Rails.application.routes.draw do
   get '/books' => 'books#index'
   get '/books/:id' => 'books#show'
   post '/books' => 'books#create'
+  patch '/books/:id' => 'books#update'
 
   # Patients resource routes
   get '/patients' => 'patients#index'
   get '/patients/:id' => 'patients#show'
   post '/patients/' => 'patients#create'
+  patch '/patients/:id' => 'patients#update'
 
   # Ingredients resource routes
   get '/ingredients' => 'ingredients#index'
