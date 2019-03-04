@@ -11,10 +11,12 @@ Rails.application.routes.draw do
   patch '/change-password' => 'users#changepw'
 
   # Books resource routes
-  get '/books' => 'books#index'
-  get '/books/:id' => 'books#show'
-  post '/books' => 'books#create'
-  patch '/books/:id' => 'books#update'
+  resources :books, except: %i[new edit]
+  # get '/books' => 'books#index'
+  # get '/books/:id' => 'books#show'
+  # post '/books' => 'books#create'
+  # patch '/books/:id' => 'books#update'
+  # delete '/books/:id' => 'books#destroy'
 
   # Patients resource routes
   get '/patients' => 'patients#index'
