@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :doctors, except: %i[new edit]
 
   # Recipes resource routes
-  resources :recipes, except: %i[new edit]
+
 
   # Books resource routes
   resources :books, except: %i[new edit]
@@ -35,8 +35,11 @@ Rails.application.routes.draw do
   # delete '/patients/:id' => 'patient#destroy'
 
   # Ingredients resource routes
-  get '/ingredients' => 'ingredients#index'
-  get '/ingredients/:id' => 'ingredients#show'
-  post '/ingredients' => 'ingredients#create'
-  patch '/ingredients/:id' => 'ingredients#update'
+  resources :ingredients, except: %i[new edit]
+  resources :recipes, except: %i[new edit]
+  resources :meals, except: %i[new edit]
+  # get '/ingredients' => 'ingredients#index'
+  # get '/ingredients/:id' => 'ingredients#show'
+  # post '/ingredients' => 'ingredients#create'
+  # patch '/ingredients/:id' => 'ingredients#update'
 end
