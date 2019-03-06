@@ -27,6 +27,7 @@ Rails.application.routes.draw do
 
   # Patients resource routes
   resources :patients, except: %i[new edit]
+  resources :appointments, except: %i[new edit]
   # get '/patients' => 'patients#index'
   # get '/patients/:id' => 'patients#show'
   # post '/patients/' => 'patients#create'
